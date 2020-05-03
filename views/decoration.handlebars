@@ -1,0 +1,56 @@
+<div id="contents">
+		<div>
+			<div class="body"  id="gallery">
+				<ul class="tabs">
+					<li class="selected">
+                        <a href="/decoration">Décoration</a>						
+					</li>                    
+					<li>
+						<a href="/ameublement">Ameublement</a>
+					</li>
+					<li>
+						<a href="/oeuvres">Diverses oeuvres</a>
+					</li>
+                    <li>
+						<a href="/gallery">Galerie</a>
+					</li>
+				</ul>
+				<h1>Décoration</h1>
+				<ul class="items">
+					{{#each decoration}}
+					<li>
+						<div class="frame">
+							<img src="{{this.image}}" alt="Img">
+						</div>
+						<h5>{{this.title}}</h5>
+						<p>
+							{{this.content}}
+						</p>
+						{{!-- <p>Publié le {{moment date format="DD-MM-YY"}}</p>						 --}}
+					</li>
+					{{/each}}
+				</ul>
+				<div id="pagination">
+					<a href="/decoration" class="previous">Précédent</a>
+					<a href="/decoration" class="next">Suivant</a>
+					<ul>
+						<li>
+							Pages:
+						</li>
+						<li class="selected">
+							<a href="/decoration">1</a>
+						</li>
+						<li>
+							<a href="/decoration">2</a>
+						</li>
+						<li>
+							<a href="/decoration">3</a>
+						</li>
+						<li>
+							<a href="/decoration">4</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>

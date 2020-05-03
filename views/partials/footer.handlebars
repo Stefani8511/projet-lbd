@@ -1,0 +1,78 @@
+<div id="footer">
+	<div>
+		<div id="links">
+			<div class="showroom">
+				<h4>POUR PLUS D'INFO</h4>
+
+				<p>
+					44 route de St Florent<br> 85 000 LA ROCHE SUR YON<br><br> 06.00.00.00.00<br><br> <a
+						href="/contact">info@LBDprojet.com</a>
+				</p>
+			</div>
+			<div>
+				<h4>Evènement</h4>
+				<ul class="posts">
+					<li>
+						{{!-- <span class="time"></span> --}}
+						<p>
+							Prochainement, vous aurez la possibilité de réserver une création en boutique<a href="/shop">
+						</p>
+					</li>
+
+				</ul>
+			</div>
+			<div>
+
+				<div id="connect">
+					{{!-- <h4>Facebook</h4> --}}
+					<a href="https://fr-fr.facebook.com/sasulbdprojet" target="_blank" class="facebook"></a>
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+		<ul class="navigation">
+			{{#if user}}
+			<li>
+				<a href="/articles/add">Ajouter un article</a>
+			</li>
+			<li>
+				<a href="/events/add">Ajouter un évènement</a>
+			</li>
+			<li>
+				<a href="/logout">Se déconnecter</a>
+			</li>
+			{{else}}
+
+			<li>
+				<a href="/">Accueil</a>
+			</li>
+			<li>
+				<a href="/about">A propos</a>
+			</li>
+			<li>
+				<a href="/gallery">Galerie</a>
+			</li>
+
+			<li>
+				<a href="/contact">Contact</a>
+			</li>
+
+			<li>
+				<a href="/user/login">S'autentifier</a>
+			</li>
+
+			{{/if}}
+		</ul>
+
+
+
+		<p id="footnote">
+			© Copyright 2020. All Rights Reserved.
+		</p>
+	</div>
+</div>

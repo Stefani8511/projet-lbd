@@ -1,0 +1,76 @@
+<div id="contents">
+		<div>
+			<div class="body"  id="gallery">
+				<ul class="tabs">
+					<li class="selected">
+						<a href="/ameublement">Ameublement</a>
+					</li>                    
+					<li>
+						<a href="/decoration">Décoration</a>
+					</li>
+					<li>
+						<a href="/oeuvres">Diverses oeuvres</a>
+					</li>
+                    <li>
+						<a href="/gallery">Galerie</a>
+					</li>
+				</ul>
+				<h1>Ameublement</h1>
+				<ul class="items">
+					{{#each article}}
+					<li>
+						<div class="frame">
+							<img src="{{this.image}}" alt="Img">
+						</div>
+						<h5>{{this.title}}</h5>
+						<p>
+							{{this.content}} 
+						</p>
+							<p>Publié le {{moment date format="DD-MM-YY"}}</p>						
+					</li>
+					{{/each}}
+				</ul>
+				
+			
+			</div>
+		</div>
+	</div>
+
+
+
+{{!-- <div id="contents">
+		<div>
+			<div class="body" id="contact">
+				
+					 {{#if user}}
+        
+            <img src="{{article.image}}" alt="placeholder image">
+            <h1 class="title">{{article.title}}</h1>
+            <p>{{{article.content}}}</p>
+            <p>Publié le {{moment createDate format="DD-MM-YY"}}</p>
+
+        
+
+        <button class="button is-primary is-outlined"><a href="/articles/edit/{{article._id}}">Modifier
+                l'article</a></button>
+
+
+
+
+        <form action="/articles/{{article._id }}/?_method=DELETE" method="POST">
+            <button class="button is-danger is-light">Supprimer l'article</button>
+        </form>
+
+        {{else}}
+        <img src="{{article.image}}" alt="placeholder image">
+        <h1 class="title">{{article.title}}</h1>
+        <p>{{{article.content}}}</p>
+        <p>Publié le {{moment createDate format="DD-MM-YY"}}</p>
+
+        {{/if}}
+    </div>
+					
+				</div>
+			</div>
+		</div>
+	</div> --}}

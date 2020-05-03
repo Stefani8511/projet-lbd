@@ -1,0 +1,50 @@
+<div class="container" >
+    <div class="row">
+
+      <div class="col-md-12">
+  
+          <form method="POST" action="/articles/category">
+
+            <div class="form-group">
+              <label for="formGroupExampleInput">Ajouter une nouvelle catégorie</label>
+              <input type="text" class="form-control" id="formGroupExampleInput"
+                placeholder="Entrer une nouvelle catégorie" name="title">
+            </div>
+
+            <button type="submit" class="btn btn-success">Enregistrer</button>
+            <a href="/articles/add">Retour</a>
+          </form>
+        
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Liste des catégories</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card mb-4 shadow-sm">
+
+        <div class="card">
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+             {{#each category}}
+              <li class="list-group-item"name="title">{{this.title}}
+
+                <form action="/articles/category/{{_id}}/?_method=DELETE" method="POST">
+                  <button type="submit" class="btn btn-sm btn-outline-danger">Supprimer la catégorie</button>
+                </form>
+              </li>
+             {{/each}}
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+      </div>
+    </div>
+  </div>
+  </div>

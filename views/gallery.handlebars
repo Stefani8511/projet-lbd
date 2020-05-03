@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Gallery - Wood Working Website Template</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+
+	<div id="contents">
+		<div>
+
+			<div class="body" id="gallery">
+				<ul class="tabs">
+					<li class="selected">
+						<a href="/gallery">Galerie</a>
+					</li>
+					<li>
+						<a href="/ameublement">Ameublement</a>
+					</li>
+					<li>
+						<a href="/decoration">Décoration</a>
+					</li>
+					<li>
+						<a href="/oeuvres">Diverses oeuvres</a>
+					</li>
+				</ul>
+				<h1>Galerie</h1>
+				<ul class="items">
+					{{#each articles}}
+					
+
+					<li>
+						<div class="frame">
+							<img src="{{this.image}}" height="50px" alt="Img">
+						</div>
+						<h5>{{this.title}}</h5>
+						<p>
+							{{this.content}}
+						</p>
+						<p>Ajouté le \{{moment createDate format="DD-MM-YYYY"}}</p>
+					</li>
+					
+
+						{{/each}}
+				</ul>
+				<div id="pagination">
+					<a href="/gallery" class="previous">Précédent</a>
+					<a href="/gallery" class="next">Suivant</a>
+					<ul>
+						<li>
+							Pages:
+						</li>
+						<li class="selected">
+							<a href="/gallery">1</a>
+						</li>
+						<li>
+							<a href="/gallery">2</a>
+						</li>
+						<li>
+							<a href="/gallery">3</a>
+						</li>
+						<li>
+							<a href="/gallery">4</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
