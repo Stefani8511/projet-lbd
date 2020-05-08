@@ -57,17 +57,17 @@ Handlebars.registerHelper('moment', require('helper-moment'));
 // var uploads = multer({ dest: 'uploads/' })
 
 //mongoose
-// const db = require ("./config/keys").MongoURI
-mongoose.connect("mongodb://localhost:27017/lbd", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true
-});
-// mongoose
-// .connect(db,
-//  ({ useNewUrlParser: true , useUnifiedTopology: true, useCreateIndex: true }))
-//  .then(() => console.log("Connecter à Mongo Cloud"))
-//  .catch(err => console.log(err))
+const db = require ("./config/keys").MongoURI
+// mongoose.connect(db, {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+//   useCreateIndex: true
+// });
+mongoose
+.connect(db,
+ ({ useNewUrlParser: true , useUnifiedTopology: true, useCreateIndex: true }))
+ .then(() => console.log("Connecter à Mongo Cloud"))
+ .catch(err => console.log(err))
 
 //connect-mongo
 const mongoStore = MongoStore(expressSession);
