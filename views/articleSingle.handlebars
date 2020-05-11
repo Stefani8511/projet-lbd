@@ -1,0 +1,79 @@
+<div id="contents">
+  <div>
+    <div class="body" id="gallery">
+      <ul class="tabs">
+        <li class="selected">
+          <a href="/ameublement">Ameublement</a>
+        </li>
+        <li>
+          <a href="/decoration">Décoration</a>
+        </li>
+        <li>
+          <a href="/oeuvres">Diverses oeuvres</a>
+        </li>
+        <li>
+          <a href="/gallery">Galerie</a>
+        </li>
+      </ul>
+      {{#if user}}
+      <ul class="items">
+        {{#each article}}
+
+        <div class="frame">
+          <h5>{{article.title}}</h5>
+           <img src="{{article.image}}" alt="Img" height="100%" width="100%">
+        </div>
+
+        {{/each}}
+      </ul>
+      {{else}}
+      <ul class="items">
+        {{#each article}}
+        <div class="frame">
+          <h5>{{article.title}}</h5>
+         <img src="{{article.image}}" alt="Img"height="100%" width="100%">
+        </div>
+
+        {{/each}}
+      </ul>
+      {{/if}}
+      <div id="pagination">
+        <a href="/gallery" class="previous">Précédent</a>
+        <a href="/gallery" class="next">Suivant</a>
+        <ul>
+          <li>
+            Pages:
+          </li>
+          <li class="selected">
+            <a href="/articleSingle">1</a>
+          </li>
+          <li>
+            <a href="/articleSingle">2</a>
+          </li>
+          <li>
+            <a href="/articleSingle">3</a>
+          </li>
+          <li>
+            <a href="/articleSingle">4</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+{{!-- <button class="button is-primary is-outlined"><a href="/articles/edit/{{article._id}}">Modifier
+                l'article</a></button> --}}
+
+
+
+
+{{!-- <form action="/articles/{{article._id }}/?_method=DELETE" method="POST">
+            <button class="button is-danger is-light">Supprimer l'article</button>
+        </form> --}}

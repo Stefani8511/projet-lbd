@@ -20,8 +20,8 @@ body {
 }
 img {
 	/* border: 0; */
-	 background-position: 50% 50%;
-	background-size: cover; 
+	 background-position: 50% 50%; 
+	 background-size: cover; 
 
 	/* height: 100%; 
 	width: 100%; */
@@ -526,6 +526,68 @@ div.shop a.more:hover {
 	text-transform: uppercase;
 }
 #gallery .price {
+	color: #ab7d0f;
+	font-size: 22px;
+}
+/**ArticleSingle**/
+#contents #articleSingle {
+	min-height: 900px;
+	width: 860px;
+	padding: 20px 50px 0;
+}
+#articleSingle h1 {
+	background: url(images/separator-light.png) repeat-x left bottom;
+	padding: 0 0 6px;
+}
+#articleSingle .items {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#articleSingle .items li {
+	background: url(images/separator-light.png) repeat-x left bottom;
+	display: inline-block;
+	width: 100%;
+	margin: 0 0 18px;
+	padding: 0 0 24px;
+}
+#articleSingle .items li h5 {
+	color: #0f0d0c;
+	font-family: "Oswald";
+	font-size: 15px;
+	font-weight: normal;
+	margin: 0 0 18px;
+	text-transform: uppercase;
+}
+#articleSingle .items li p {
+	color: #626161;
+	padding-right: 10px;
+}
+#articleSingle .frame {
+	float: left;
+	background-position: 0 0;
+	/* height: 264px;
+	width: 418px; */
+	margin-left: -38px;
+	padding: 1px 21px 0 41px;
+	text-align: center;
+}
+#articleSingle .details {
+	margin: 0 0 18px;
+}
+#articleSingle .items .details h5 {
+	margin: 0;
+}
+#articleSingle .details p {
+	color: #626161;
+	padding: 0;
+}
+#articleSingle .details p b {
+	color: #241b18;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+#articleSingle .price {
 	color: #ab7d0f;
 	font-size: 22px;
 }

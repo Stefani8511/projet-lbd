@@ -6,6 +6,7 @@ const ArticleSchema = new mongoose.Schema ({
 
     title : String, 
     category: { type: mongoose.Schema.Types.ObjectId, ref: "category" },
+    status: String,
     content: String,   
     price: Number,   
     image: String ,

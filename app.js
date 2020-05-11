@@ -24,12 +24,14 @@ const ameublement = require("./controllers/ameublement")
 const decoration = require("./controllers/decoration")
 const oeuvres = require ("./controllers/oeuvres")
 const shop = require ("./controllers/shop")
-// const articleSingle = require ("./controllers/articleSingle")
+const articleSingle = require ("./controllers/articleSingle")
 
 //articles
 const articleAdd = require ("./controllers/articleAdd")
 const articlePost = require ("./controllers/articlePost")
-
+const poster = require("./controllers/a-poster")
+const vente = require("./controllers/a-vendre")
+const ventpost = require("./controllers/a-vendre-poster")
 
 //category
 const categoryAdd = require("./controllers/categoryAdd")
@@ -129,6 +131,7 @@ app.use('articles/add', auth)
 const redirectAuthSuccess = require ('./middleware/redirectAuthSuccess')
 
 
+
 //route index
 app.get("/", homePage)
 
@@ -138,7 +141,7 @@ app.post("/articles/add", auth, articlePost)
 app.get("/articles/category", auth, categoryAdd)
 app.post("/articles/category", auth, categoryPost)
 app.delete("/articles/category/:id", auth, categoryDelete)
-// app.get ("/articles/:id", articleSingle)
+app.get ("/articles/:id", articleSingle)
 
 //User
 app.get("/user/add", redirectAuthSuccess, userAdd)
